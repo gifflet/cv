@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,76 +7,125 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     line-height: 1.6;
-    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
 }
 
+/* Tema escuro */
+body.dark-theme {
+    background-color: #2f2f2f;  /* Cor de fundo do tema escuro */
+    color: #ffffff;              /* Cor do texto no tema escuro */
+}
+
+.container.dark-theme,
+header.dark-theme,
+section.dark-theme {
+    background-color: #1e1e1e; /* Cor de fundo das seções no tema escuro */
+}
+
+h1.dark-theme,
+h2.dark-theme,
+h3.dark-theme {
+    color: #ffffff; /* Texto das cabeçalhos no tema escuro */
+}
+
+ul li.dark-theme {
+    background-color: #007acc; /* Cor de fundo azul para os itens da lista no tema escuro */
+    color: #ffffff;            /* Cor do texto dos itens da lista no tema escuro */
+}
+
+a.dark-theme {
+    color: #00ccff; /* Cor dos links no tema escuro (visível) */
+}
+
+/* Estilo geral do ícone de tema */
+#theme-toggle {
+    position: absolute;  /* Para posicionar o ícone no canto superior direito */
+    top: 20px;           /* Distância do topo */
+    right: 20px;         /* Distância da direita */
+    font-size: 24px;    /* Tamanho do ícone */
+    cursor: pointer;     /* Cursor de ponteiro ao passar sobre o ícone */
+    color: #ffffff;      /* Cor do ícone no tema escuro */
+}
+
+/* Ajuste do ícone no tema claro */
+body.light-theme #theme-toggle {
+    color: #000000;      /* Cor do ícone no tema claro */
+}
+
+/* Tema claro */
+body.light-theme {
+    background-color: #ffffff;  /* Cor de fundo do tema claro */
+    color: #000000;              /* Cor do texto no tema claro */
+}
+
+.container.light-theme,
+header.light-theme,
+section.light-theme {
+    background-color: #f0f0f0; /* Cor de fundo das seções no tema claro */
+}
+
+h1.light-theme,
+h2.light-theme,
+h3.light-theme {
+    color: #000000; /* Texto das cabeçalhos no tema claro */
+}
+
+ul li.light-theme {
+    background-color: #0056b3; /* Cor de fundo azul para os itens da lista no tema claro */
+    color: #ffffff;            /* Cor do texto dos itens da lista no tema claro */
+}
+
+a.light-theme {
+    color: #007acc; /* Cor dos links no tema claro (padrão) */
+}
+
+/* Estilo geral */
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    background: white;
+    margin: 20px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;  /* Necessário para o posicionamento absoluto do ícone */
 }
 
 h1 {
-    font-size: 2.5em !important;
-    margin-bottom: 10px;
+    font-size: 2.5em;
 }
 
 h2 {
     font-size: 1.5em;
-    color: gray;
-    margin-top: 0.5em;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#contact {
-    margin-top: 10px;
-    font-size: 1.1em;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h3 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
-.experience {
-    margin-bottom: 20px;
+h3 {
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none; /* Remove as bolinhas padrão */
+    padding: 0;
 }
 
 ul li {
-    background: #007bff;
-    color: white;
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Estilos de link */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Hover effect para links */
+a:hover {
+    text-decoration: underline; /* Sublinha no hover */
 }
