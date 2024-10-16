@@ -7,6 +7,12 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     body.classList.toggle('light-theme');
     body.classList.toggle('dark-theme');
 
+    // Alterna as classes de tema nos links
+    Array.from(document.getElementsByTagName('a')).forEach(link => {
+        link.classList.toggle('dark-theme');
+        link.classList.toggle('light-theme');
+    });
+
     // Atualiza o ícone do botão de acordo com o tema
     if (body.classList.contains('light-theme')) {
         themeToggleIcon.classList.remove('fa-sun'); // Remove ícone de sol
