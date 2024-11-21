@@ -143,3 +143,9 @@ a:hover {
 .light-theme .experience {
     background-color: #f0f0f0;
 }
+
+.period {
+    color: #888888;  /* Cor cinza neutra que funciona bem em ambos os temas */
+    font-style: italic;
+    margin: 5px 0;
+}
