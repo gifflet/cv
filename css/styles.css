@@ -129,3 +129,17 @@ a {
 a:hover {
     text-decoration: underline; /* Sublinha no hover */
 }
+
+.experience {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dark-theme .experience {
+    background-color: #1e1e1e;
+}
+
+.light-theme .experience {
+    background-color: #f0f0f0;
+}
