@@ -13,71 +13,92 @@ body {
 
 /* Tema escuro */
 body.dark-theme {
-    background-color: #2f2f2f;  /* Cor de fundo do tema escuro */
-    color: #ffffff;              /* Cor do texto no tema escuro */
+    background-color: #2f2f2f;
+    /* Cor de fundo do tema escuro */
+    color: #ffffff;
+    /* Cor do texto no tema escuro */
 }
 
 .container.dark-theme,
 header.dark-theme,
 section.dark-theme {
-    background-color: #1e1e1e; /* Cor de fundo das seções no tema escuro */
+    background-color: #1e1e1e;
+    /* Cor de fundo das seções no tema escuro */
 }
 
 h1.dark-theme,
 h2.dark-theme,
 h3.dark-theme {
-    color: #ffffff; /* Texto das cabeçalhos no tema escuro */
+    color: #ffffff;
+    /* Texto das cabeçalhos no tema escuro */
 }
 
 ul li.dark-theme {
-    background-color: #007acc; /* Cor de fundo azul para os itens da lista no tema escuro */
-    color: #ffffff;            /* Cor do texto dos itens da lista no tema escuro */
+    background-color: #007acc;
+    /* Cor de fundo azul para os itens da lista no tema escuro */
+    color: #ffffff;
+    /* Cor do texto dos itens da lista no tema escuro */
 }
 
 a.dark-theme {
-    color: #00ccff; /* Cor dos links no tema escuro (visível) */
+    color: #00ccff;
+    /* Cor dos links no tema escuro (visível) */
 }
 
 /* Estilo geral do ícone de tema */
 #theme-toggle {
-    position: absolute;  /* Para posicionar o ícone no canto superior direito */
-    top: 20px;           /* Distância do topo */
-    right: 20px;         /* Distância da direita */
-    font-size: 24px;    /* Tamanho do ícone */
-    cursor: pointer;     /* Cursor de ponteiro ao passar sobre o ícone */
-    color: #ffffff;      /* Cor do ícone no tema escuro */
+    position: absolute;
+    /* Para posicionar o ícone no canto superior direito */
+    top: 20px;
+    /* Distância do topo */
+    right: 20px;
+    /* Distância da direita */
+    font-size: 24px;
+    /* Tamanho do ícone */
+    cursor: pointer;
+    /* Cursor de ponteiro ao passar sobre o ícone */
+    color: #ffffff;
+    /* Cor do ícone no tema escuro */
 }
 
 /* Ajuste do ícone no tema claro */
 body.light-theme #theme-toggle {
-    color: #000000;      /* Cor do ícone no tema claro */
+    color: #000000;
+    /* Cor do ícone no tema claro */
 }
 
 /* Tema claro */
 body.light-theme {
-    background-color: #ffffff;  /* Cor de fundo do tema claro */
-    color: #000000;              /* Cor do texto no tema claro */
+    background-color: #ffffff;
+    /* Cor de fundo do tema claro */
+    color: #000000;
+    /* Cor do texto no tema claro */
 }
 
 .container.light-theme,
 header.light-theme,
 section.light-theme {
-    background-color: #f0f0f0; /* Cor de fundo das seções no tema claro */
+    background-color: #f0f0f0;
+    /* Cor de fundo das seções no tema claro */
 }
 
 h1.light-theme,
 h2.light-theme,
 h3.light-theme {
-    color: #000000; /* Texto das cabeçalhos no tema claro */
+    color: #000000;
+    /* Texto das cabeçalhos no tema claro */
 }
 
 ul li.light-theme {
-    background-color: #0056b3; /* Cor de fundo azul para os itens da lista no tema claro */
-    color: #ffffff;            /* Cor do texto dos itens da lista no tema claro */
+    background-color: #0056b3;
+    /* Cor de fundo azul para os itens da lista no tema claro */
+    color: #ffffff;
+    /* Cor do texto dos itens da lista no tema claro */
 }
 
 a.light-theme {
-    color: #007acc; /* Cor dos links no tema claro (padrão) */
+    color: #007acc;
+    /* Cor dos links no tema claro (padrão) */
 }
 
 /* Estilo geral */
@@ -91,7 +112,8 @@ a.light-theme {
 header {
     text-align: center;
     margin-bottom: 20px;
-    position: relative;  /* Necessário para o posicionamento absoluto do ícone */
+    position: relative;
+    /* Necessário para o posicionamento absoluto do ícone */
 }
 
 h1 {
@@ -110,7 +132,8 @@ h3 {
 }
 
 ul {
-    list-style: none; /* Remove as bolinhas padrão */
+    list-style: none;
+    /* Remove as bolinhas padrão */
     padding: 0;
 }
 
@@ -122,12 +145,14 @@ ul li {
 
 /* Estilos de link */
 a {
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none;
+    /* Remove o sublinhado */
 }
 
 /* Hover effect para links */
 a:hover {
-    text-decoration: underline; /* Sublinha no hover */
+    text-decoration: underline;
+    /* Sublinha no hover */
 }
 
 .experience {
@@ -145,7 +170,40 @@ a:hover {
 }
 
 .period {
-    color: #888888;  /* Cor cinza neutra que funciona bem em ambos os temas */
+    color: #888888;
+    /* Cor cinza neutra que funciona bem em ambos os temas */
     font-style: italic;
     margin: 5px 0;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.language-selector button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.language-selector button.active {
+    background-color: #007acc;
+}
+
+.light-theme .language-selector button {
+    background-color: #ddd;
+    color: #333;
+}
+
+.light-theme .language-selector button.active {
+    background-color: #007acc;
+    color: #fff;
 }
